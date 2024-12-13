@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Router, { useRouter } from "next/router";
 
-
-export default function Task1() {
+export default function Task1(){
+const router = useRouter(); 
   return (
     <div className="flex justify-center items-center h-screen">
+      <div onClick={() => router.back()}className="w-24 h-10 border-2 border-white bg-slate-300 hover:bg-slate-500 rounded-md text-2xl flex items-center justify-center">Back</div>
       <div className="bg-violet-50 relative border border-4 rounded-xl border-red-100 w-96 h-96">
         <p className="  flex justify-center font-bold text-xl"> Muna </p>
         <p className="  text-xl flex justify-center"> 16! </p>

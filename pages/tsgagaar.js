@@ -1,6 +1,10 @@
-export default function Tsgagaar() {
+import Router, { useRouter } from "next/router";
+
+export default function Home() {
+  const router = useRouter(); {
   return (
     <div className="w-full h-screen flex items-center justify-center bg-black">
+      <div onClick={() => router.back()}className="w-24 h-10 border-2 border-white bg-slate-300 hover:bg-slate-500 rounded-md text-2xl flex items-center justify-center">Back</div>
       <div className="w-[98%] h-[96%] flex justify-between items-end">
         <div className="w-24 h-full bg-slate-900 rounded-3xl flex flex-col items-center">
           <div className="w-12 h-12 rounded-full bg-slate-800 mt-4 flex items-center justify-center">
@@ -280,4 +284,5 @@ export default function Tsgagaar() {
       </div>
     </div>
   );
+};
 }
