@@ -22,6 +22,9 @@ export default function Home() {
         <p onClick={() => router.push("task4")} className=" w-96 h-48 border-2 border-white bg-slate-300 hover:bg-slate-500 rounded-md text-2xl flex items-center justify-center text-white">
           Task6
         </p>
+        <p onClick={() => router.push("biydaalt")} className=" w-96 h-48 border-2 border-white bg-slate-300 hover:bg-slate-500 rounded-md text-2xl flex items-center justify-center text-white">
+          Biy daalt
+        </p>
     </div>
   );
 }

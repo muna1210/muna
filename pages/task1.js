@@ -15,6 +15,13 @@ const router = useRouter();
         <p className=" hover:text-rose-900 text-lg flex absolute  bottom-10 left-8 "> Design </p>
         <p className=" hover:text-rose-900 text-lg flex absolute  top-1/2 left-16"> ITW </p>
         <p className=" hover:text-rose-900 text-lg flex absolute  inset-y-40 left-5"> Draw </p>
+
+        <p className=" hover:text-rose-900 text-lg flex absolute  inset-y-20 right-10 "> Lego </p>
+        <p className=" hover:text-rose-900 text-lg flex absolute  top-y-25 right-5 "> Paint </p>
+        <p className=" hover:text-rose-900 text-lg flex absolute  bottom-20 right-2 "> Crocheting </p>
+        <p className=" hover:text-rose-900 text-lg flex absolute  bottom-5 right-6 "> Collect books </p>
+        <p className=" hover:text-rose-900 text-lg flex absolute  top-1/2 right-10 "> Sweets </p>
+        <p className=" hover:text-rose-900 text-lg flex absolute  inset-y-40 right-5 "> Music </p>
         <div className="flex justify-center items-center">
         <Image src="/zurg112.jpg" width={150} height={150} />
         </div>

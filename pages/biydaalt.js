@@ -2,28 +2,41 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 
 const data = [
-    {id: 1, name: "Blitz", email:"Blitzy@gmail.com"},
-    {id: 2, name: "Senzu", email:"Senzu@gmail.com"},
-    {id: 3, name: "Mzinho", email:"Mzinho@gmail.com"},
-    {id: 4, name: "910", email:"910@gmail.com"},
-    {id: 5, name: "Techno4K", email:"Techno4K@gmail.com"},
-    {id: 6, name: "Maaraa", email:"Maaraa@gmail.com"},
+  { id: 1, Name: "AriunBayar", Lastname: "OdBayr" },
+  { id: 2, Name: "Badraa", Lastname: "Tsogbaatar" },
+  { id: 3, Name: "Bilguuntugs", Lastname: "Amarbat" },
+  { id: 4, Name: "Gan-Erdene", Lastname: "Undrakhtamir" },
+  { id: 5, Name: "Gunbilig", Lastname: "Bat-enh" },
+  { id: 6, Name: "Delgermurun", Lastname: "Ganbold" },
+  { id: 7, Name: "Jargal", Lastname: "Bayndalai" },
+  { id: 8, Name: "Munkhbaysgalan", Lastname: "Chinbat" },
+  { id: 9, Name: "Munkhnaran", Lastname: "Ulziibayr" },
+  { id: 10, Name: "Nomindari", Lastname: "Enkhtur" },
+  { id: 11, Name: "Siilen", Lastname:"Batsaikhan"},
+  { id: 12, Name: "Tuvshin", Lastname: "Bulgan" },
+  { id: 13, Name: "Temugei", Lastname: "Teluun" },
+  { id: 14, Name: "Temuulen", Lastname: "Temuujin" },
+  { id: 15, Name: "Undrakh", Lastname: "Sukhbaatar" },
+  { id: 16, Name: "Khangarid", Lastname: "Jargalsaikhan" },
+  { id: 17, Name: "Chinbiligt", Lastname: "Dovchinbazar" },
+  { id: 18, Name: "Erdenebold", Lastname: "Erdenetugs" },
+  { id: 19, Name: "Erdenejargal", Lastname: "Batragchaa" },
 ];
 
 export default function News() {
   const router = useRouter();
   const [grid, setGrid] = useState(true);
   const [search, setSearch] = useState("");
-  const [filteredPlayers, setFilteredPlayers] = useState(data);
+  const [filteredStudents, setFilteredStudents] = useState(data);
 
   const handleSearch = (event) => {
     const query = event.target.value;
     setSearch(query);
 
-    const filtered = data.filter((players) =>
-      players.name.toLowerCase().includes(query.toLowerCase())
+    const filtered = data.filter((student) =>
+      student.Name.toLowerCase().includes(query.toLowerCase())
     );
-    setFilteredPlayers(filtered);
+    setFilteredStudents(filtered);
   };
 
   return (
@@ -33,13 +46,13 @@ export default function News() {
         <div onClick={() => router.back()}className="w-24 h-10 border-2 border-white bg-slate-300 hover:bg-slate-500 rounded-md text-2xl flex items-center justify-center">Back</div>
         </div>
         <h1 className="text-white mt-5 font-bold text-xl mb-3">
-          жагсаалт
+          Сурагчдын жагсаалт
         </h1>
       </div>
       <div className="flex justify-center">
         <input
           type="text"
-          placeholder="Хэрэглэгчийн нэрийг хайх"
+          placeholder="Search by name..."
           value={search}
           onChange={handleSearch}
           className="w-10/12 outline-none rounded-xl shadow-xl p-3"
@@ -53,21 +66,21 @@ export default function News() {
       </div>
       <div className="mt-5 flex justify-center">
         <div className="w-11/12">
-          {filteredPlayers.length > 0 ? (
+          {filteredStudents.length > 0 ? (
             <div
               className={
                 grid ? "grid grid-cols-2 gap-4" : "space-y-4"
               }
             >
-              {filteredPlayers.map((players) => (
+              {filteredStudents.map((student) => (
                 <div
-                  key={players.id}
+                  key={student.id}
                   className="shadow-2xl bg-gradient-to-r from-pink-400 to-rose-100 hover:from-violet-300 hover:to-purple-5100 rounded-xl p-4 flex flex-col text-black"
                 >
                   <h1 className="font-bold text-2xl mb-3">
-                    {players.name}
+                    {student.Name}
                   </h1>
-                   {players.email}
+                  <h1>Сурагчын овог: {student.Lastname}</h1>
                 </div>
               ))}
             </div>
