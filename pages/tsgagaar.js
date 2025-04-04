@@ -73,7 +73,7 @@ export default function Home() {
               </svg>
 
               <h1 className="text-slate-600 text-md">Settings</h1>
-              <div onClick={() => router.back()}className="w-24 h-10 border-2 border-white bg-slate-300 hover:bg-slate-500 rounded-md text-2xl flex items-center justify-center">Back</div>
+              <div onClick={() => router.back()} className="w-24 h-10 border-2 border-white bg-slate-300 hover:bg-slate-500 rounded-md text-2xl flex items-center justify-center">Back</div>
             </div>
           </div>
         </div>
