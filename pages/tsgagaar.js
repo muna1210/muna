@@ -96,7 +96,7 @@ export default function Home() {
           </div>
           <div className="w-full h-64 bg-slate-900 rounded-3xl flex items-end justify-center relative">
             <h1 className="text-slate-400 absolute left-8 font-semibold top-4">
-              TODAY'S FORECAST
+              TODAYS FORECAST
             </h1>
             <div className="w-11/12 h-2/3 mb-8 grid grid-cols-6">
               <div className="flex flex-col items-center">
