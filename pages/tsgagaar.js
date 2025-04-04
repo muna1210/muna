@@ -4,7 +4,7 @@ export default function Home() {
   const router = useRouter(); {
   return (
     <div className="w-full h-screen flex items-center justify-center bg-black">
-      <div onClick={() => router.back()}className="w-24 h-10 border-2 border-white bg-slate-300 hover:bg-slate-500 rounded-md text-2xl flex items-center justify-center">Back</div>
+      
       <div className="w-[98%] h-[96%] flex justify-between items-end">
         <div className="w-24 h-full bg-slate-900 rounded-3xl flex flex-col items-center">
           <div className="w-12 h-12 rounded-full bg-slate-800 mt-4 flex items-center justify-center">
@@ -12,8 +12,8 @@ export default function Home() {
               src="https://cdn-icons-png.flaticon.com/512/3944/3944594.png"
               className="w-8"
             />
-          </div>
-          <div className="w-full h-1/2 mt-8 flex flex-col items-center">
+           </div>
+           <div className="w-full h-1/2 mt-8 flex flex-col items-center">
             <div className="w-24 h-24 flex flex-col items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,6 +73,7 @@ export default function Home() {
               </svg>
 
               <h1 className="text-slate-600 text-md">Settings</h1>
+              <div onClick={() => router.back()}className="w-24 h-10 border-2 border-white bg-slate-300 hover:bg-slate-500 rounded-md text-2xl flex items-center justify-center">Back</div>
             </div>
           </div>
         </div>

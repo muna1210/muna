@@ -1,8 +1,14 @@
-import React, {useState} from "react"; 
+import React, { useEffect ,useState} from "react"; 
 import Router, { useRouter } from "next/router";
 export default function Home() {
   const [color, setColor] = useState(" ");
   const router = useRouter();
+
+  useEffect (() => {
+    setColor ("red");
+    console.log("oroh");
+
+  },[])
   return (
     
     <div className={`flex space-x-4 w-full h-screen bg-${color}-800`}>
