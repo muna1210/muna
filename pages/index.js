@@ -12,6 +12,7 @@ const tasks = [
   { name: "Tooluur", path: "tooluur", img: "/tooluur.png" },
   { name: "Mongol api", path: "11b", img: "/mongol.png" },
   { name: "Biydaalt 1r uliral", path: "biydaalt", img: "/biydaalt1r.png" },
+  { name: "Toki", path: "toki", img: "/toki.png" },
 ];
 
 export default function TaskList() {
@@ -50,3 +51,9 @@ export default function TaskList() {
     </div>
   );
 }
+
+
+
+
+
+

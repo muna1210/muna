@@ -73,7 +73,7 @@ export default function News() {
 
   return (
     <div className="p-5">
-      {/* Search Bar */}
+      
       <div className="flex justify-center mt-5 relative">
         <input
           type="text"
