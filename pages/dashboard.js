@@ -1,3 +1,4 @@
+import Cards from "@/components/cards";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
@@ -100,25 +101,11 @@ export default function News() {
           </button>
         </div>
 
+      <Cards props={data}/>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-y-auto">
           {filteredProducts.map((product) => (
-            <div
-              key={product.id}
-              className="bg-white p-4 rounded-lg shadow flex flex-col items-center"
-            >
-              <img
-                src={product.Image}
-                alt={product.Name}
-                className="w-24 h-24 mb-2"
-              />
-              <h3 className="font-semibold text-lg">{product.Name}</h3>
-              <p className="text-sm">Өнгө: {product.Color}</p>
-              <p className="text-sm">Дагалдах: {product.Accessories}</p>
-              <p className="text-sm">Үнэ: {product.Price}</p>
-              <p className="text-sm">Үлдэгдэл: {product.Stock}</p>
-            </div>
-          ))}
+            <Cards Name={product.Name} Price={product.Price}/>))}
         </div>
       </div>
     </div>
