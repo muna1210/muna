@@ -12,9 +12,34 @@ export default function Calculate() {
     if(c > max) max = c;
     SetMax(max);
    };
-   const calculateAverage = (a, b, c) => { SetAverage((a + b + c)/3);};
-   const count = data.push("name");
+   const calculateAverage = (a, b, c) => { SetAverage((a + b + c)/3);
+      SetAverage(avg);
+   };
+   const addtoData = (value) => {
+   const num = Number(Inputvalue);
+    SetData([...data, value]);
+    SetInputValue("");
+   };
    return(
-      <button></button>
+      <div>
+         <button onClick ={() => addNumbers(6, 4)}>6 + 4</button>
+         <p>Sum: {sum} </p>
+
+         <button onClick ={() => findMax(6, 4, 2)}>Max</button>
+         <p>Max: {max} </p>
+
+         <button onClick ={() => calcAverage(6, 4, 2)}>Calculate Average</button>
+         <p>Average: {average} </p>
+
+         <div>
+         <input
+         value = {inputValue}
+         onChange = {(e) => setInputValue(e.target.value)}
+         />
+         <button onClick ={() => addtoData(Number(inputValue))}>Add to Data</button>
+         <p>Data: {data.join(", ")} </p>
+         </div>
+      </div>
    );
+
 }

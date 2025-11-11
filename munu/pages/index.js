@@ -22,7 +22,7 @@ export default function TaskList() {
 
   return (
     <div className="w-full h-full bg-pink-100 flex flex-col items-center justify-center p-6">
-      <h1 className="text-4xl text-gray-700 font-extrabold mb-6">12B - U. Munkhnaran</h1>
+      <h1 className="text-4xl text-gray-700 font-extrabold mb-6">11B - U. Munkhnaran</h1>
       <div className="flex gap-4 mb-6">
         <button 
           onClick={() => setView('grid')} 
